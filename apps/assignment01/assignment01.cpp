@@ -7,12 +7,15 @@
 //
 #include <iostream>
 #include <stack>
+#include <string>
 using namespace std;
 
 void pointerAntiPattern1();
 void pointerAntiPattern2();
 void pointerAntiPattern3();
 string stringStack();
+
+stack<string> myStack;
 
 int main()
 {
@@ -40,7 +43,6 @@ void pointerAntiPattern1() {
 	}
 }
 
-
 void pointerAntiPattern2() {
 	int* ptr1 = nullptr;
 	int* ptr2 = nullptr;
@@ -51,7 +53,6 @@ void pointerAntiPattern2() {
 	ptr2 = ptr1;
 	delete ptr1;
 	ptr1 = nullptr;
-
 	cout << ptr2 << endl;
 	for (int x = 0; x < 10; x++) {
 		cout << ptr2[x] << endl;
@@ -60,16 +61,12 @@ void pointerAntiPattern2() {
 
 void pointerAntiPattern3() {
 	string myString = " ";
-	for (int s = 0; s < 10; s++) {
-		myString = stringStack();
-		cout << myString << endl;
-	}
+	myString = stringStack();
+	cout << myString << endl;
 }
 
 string stringStack() {
-	static stack<string> myStack;
-	static string* sptr = new string;
-	*sptr = "abc";
+	string* sptr = new string("abc");
 	myStack.push(*sptr);
 	return *sptr;
 }
