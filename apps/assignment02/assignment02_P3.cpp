@@ -1,6 +1,6 @@
 //
 // File:   assignment2_P3.cpp
-// Author: Anna Dubé
+// Author: Anna Dube
 // Purpose:
 // To demonstrate the ReceiptBag class
 // using vectors

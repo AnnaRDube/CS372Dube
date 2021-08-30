@@ -1,6 +1,6 @@
 //
 // File:   assignment2.cpp
-// Author: Anna Dubé
+// Author: Anna Dube
 // Purpose:
 // To demonstrate the Bag class
 // using linked lists
