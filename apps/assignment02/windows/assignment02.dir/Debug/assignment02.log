@@ -1,0 +1,15 @@
+﻿  Building Custom Rule C:/Users/user/My Documents/GitHub/CS372Dube/apps/assignment02/CMakeLists.txt
+  assignment02.cpp
+C:\Users\user\My Documents\GitHub\CS372Dube\include\cs372ReceiptBag.h(13,17): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\user\My Documents\GitHub\CS372Dube\include\cs372ReceiptBag.h(12): message : while compiling class template member function 'int ReceiptBag<char>::insert(Thing)'
+          with
+          [
+              Thing=char
+          ]
+C:\Users\user\My Documents\GitHub\CS372Dube\apps\assignment02\assignment02.cpp(49): message : see reference to function template instantiation 'int ReceiptBag<char>::insert(Thing)' being compiled
+          with
+          [
+              Thing=char
+          ]
+C:\Users\user\My Documents\GitHub\CS372Dube\apps\assignment02\assignment02.cpp(45): message : see reference to class template instantiation 'ReceiptBag<char>' being compiled
+  assignment02.vcxproj -> C:\Users\user\My Documents\GitHub\CS372Dube\apps\assignment02\windows\Debug\assignment02.exe
