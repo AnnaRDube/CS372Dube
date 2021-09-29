@@ -51,29 +51,39 @@ int main() {
 			}
 			else if (c == 2) {
 				int num;
+				bool found = false;
 				cout << "\nEnter a task number: ";
 				cin >> num;
 				cout << endl;
 				
 				for (int x = 0; x < myTasks.size(); x++) {
 					if (myTasks[x].taskN == num) {
+						found == true;
 						cout << myTasks[x].taskN << " "
 							<< myTasks[x].taskC << " "
 							<< myTasks[x].taskD << endl << endl;
 					}
 				}
+				if (!found) {
+					cout << "Task does not exist\n\n";
+				}
 			}
 			else if (c == 3) {
 				int num;
+				bool found = false;
 				cout << "\nEnter the task number to mark as done: ";
 				cin >> num;
 				cout << endl;
 				for (int x = 0; x < myTasks.size(); x++) {
 					if (myTasks[x].taskN == num) {
+						found = true;
 						myTasks[x].taskC = 'D';
+						changes = true;
 					}
 				}
-				changes = true;
+				if (!found) {
+					cout << "Task does not exist\n\n";
+				}
 			}
 			else if (c == 4) {
 				file1.close();
