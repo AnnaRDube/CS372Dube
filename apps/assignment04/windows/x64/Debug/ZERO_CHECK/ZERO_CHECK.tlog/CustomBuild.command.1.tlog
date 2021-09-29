@@ -1,0 +1,10 @@
+^C:\USERS\USER\MY DOCUMENTS\GITHUB\CS372DUBE\APPS\ASSIGNMENT04\WINDOWS\CMAKEFILES\7D897AC0CD9BF1048EBDE8BB97000D09\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Users/user/My Documents/GitHub/CS372Dube/apps/assignment04" "-BC:/Users/user/My Documents/GitHub/CS372Dube/apps/assignment04/windows" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/user/My Documents/GitHub/CS372Dube/apps/assignment04/windows/assignment04.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
