@@ -13,9 +13,9 @@ using namespace std;
 
 void displayMenu();
 struct Task {
-	int taskN;
-	char taskC;
-	string taskD;
+	int taskN = 0;
+	char taskC = ' ';
+	string taskD = "";
 };
 vector<Task> myTasks;
 bool changes = false;
@@ -30,9 +30,7 @@ int main() {
 	}
 	else {
 		Task temp;
-		while (!file1.eof()) {
-			temp.taskN = 0, temp.taskC = ' ', temp.taskD = "";
-			file1 >> temp.taskN >> temp.taskC;
+		while (file1 >> temp.taskN >> temp.taskC) {
 			getline(file1, temp.taskD);
 			myTasks.push_back(temp);
 		}
@@ -44,7 +42,7 @@ int main() {
 				cout << endl;
 				for (int counter = 0; counter < myTasks.size(); counter++) {
 					cout << myTasks[counter].taskN << " "
-						<< myTasks[counter].taskC << " "
+						<< myTasks[counter].taskC
 						<< myTasks[counter].taskD << endl;
 				}
 				cout << endl;
@@ -58,9 +56,9 @@ int main() {
 				
 				for (int x = 0; x < myTasks.size(); x++) {
 					if (myTasks[x].taskN == num) {
-						found == true;
+						found = true;
 						cout << myTasks[x].taskN << " "
-							<< myTasks[x].taskC << " "
+							<< myTasks[x].taskC 
 							<< myTasks[x].taskD << endl << endl;
 					}
 				}
@@ -99,7 +97,7 @@ int main() {
 						for (int x = 0; x < myTasks.size(); x++) {
 							if (myTasks[x].taskC == 'U') {
 								file2 << myTasks[x].taskN << " "
-									<< myTasks[x].taskC << " "
+									<< myTasks[x].taskC
 									<< myTasks[x].taskD << endl;
 							}
 						}
