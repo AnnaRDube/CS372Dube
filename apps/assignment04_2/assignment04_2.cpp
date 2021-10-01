@@ -73,13 +73,17 @@ void mapDictionary() {
 				--position;
 			}
 			for (int x = 0; x < 3; ++x) {
-				temp += *position + " ";
+				if (*position != " ") {
+					temp += *position + " ";
+				}
 				++position;
 			}
 			temp += *position + " ";
 			for (int x = 0; x < 3; ++x) {
 				++position;
-				temp += *position + " ";
+				if (*position != " ") {
+					temp += *position + " ";
+				}
 			}
 			for (int x = 0; x < 3; ++x) {
 				--position;
