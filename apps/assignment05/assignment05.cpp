@@ -19,7 +19,7 @@ void moveDisksIter(int, stack<int>, stack<int>, stack<int>,
 void moveBetweenPoles(stack<int>&, stack<int>&, int, int);
 
 int main() {
-	const int NUMDISKS = 50;
+	const int NUMDISKS = 4;
 	const int FROMPEG = 1;
 	const int TOPEG = 3;
 	const int TEMPPEG = 2;
@@ -27,7 +27,7 @@ int main() {
 	stack<int> fromA;
 	stack<int> toC;
 	stack<int> tempB;
-
+	
 	cout << "************ Recursive ************\n";
 	auto startR = std::chrono::steady_clock::now();
 	moveDisksRec(NUMDISKS, FROMPEG, TOPEG, TEMPPEG);
@@ -35,7 +35,7 @@ int main() {
 	cout << "All the pegs are moved! " << endl;
 	std::chrono::duration<double> recursiveTime = endR - startR;
 	cout << "\nElapsed time: " << recursiveTime.count() << " s \n";
-
+	
 	cout << "\n************ Iterative ************\n";
 	auto startI = std::chrono::steady_clock::now();
 	moveDisksIter(NUMDISKS, fromA, toC, tempB, FROMPEG, TOPEG, TEMPPEG);
