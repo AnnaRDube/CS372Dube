@@ -6,9 +6,9 @@
 //
 
 #include <iostream>
-#include<ctime>
-#include<cstdlib>
-#include<chrono>
+#include <ctime>
+#include <cstdlib>
+#include <chrono>
 #include <iomanip>
 #include <cmath>
 using namespace std;
@@ -45,7 +45,8 @@ int main() {
 		equalX = anyEqual(arrSize, ptr);
 		auto end = chrono::steady_clock::now();
 		chrono::duration<double> elasped_seconds = end - start;
-		cout << setw(13) << arrSize << setw(14) << elasped_seconds.count() << "s" 
+		cout << setw(4) << arrSize << "*20=" << setw(5) 
+			<< arrSize*sizeX << setw(14) << elasped_seconds.count() << "s" 
 			<< setw(21) << pow(arrSize, 2) * pow(sizeX, 2) << endl;
 	}
 	delete[] ptr;
