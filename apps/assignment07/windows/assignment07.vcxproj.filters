@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\user\My Documents\GitHub\CS372Dube\apps\assignment07\assignment07.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\user\My Documents\GitHub\CS372Dube\apps\assignment07\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{FCF244E8-C7E9-30FF-9664-7D187C9ECE56}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
