@@ -50,7 +50,7 @@ int main() {
 			file1 >> temp.taskN >> temp.taskC;
 			getline(file1, hold);
 			if (file1.end) {
-				temp.taskD = "", temp.taskP;
+				temp.taskD = "", temp.taskP = 0;
 				
 				for (int x = 0; x < hold.size(); x++) {
 					if (isalpha(hold[x]) || hold[x] == ' ') {
