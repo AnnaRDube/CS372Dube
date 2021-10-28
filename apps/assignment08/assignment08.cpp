@@ -2,7 +2,7 @@
 // File:   assignment08.cpp
 // Author: Anna Dube
 // Purpose:
-// 
+// Sort items in a Tree
 //
 #include <iostream>
 #include <list>
@@ -27,12 +27,12 @@ void f3(int thing) {
 }
 
 int main() {
-	Tree <int> tree1 = { 47, 74, 28, 32, 45, 43, 100 };
-	list<int> result = ascendTree(tree1);
-	displayContents(result);
+	Tree<int> tree1 = { 47, 74, 28, 32, 45, 43, 100 };
+	list<int> result;
+	result = ascendTree(tree1);
+	displayContents(result);	
 	result = descendTree(tree1);
 	displayContents(result);
-
 	return 0;
 }
 
@@ -43,13 +43,15 @@ list<int> ascendTree(Tree<int> tree1) {
 	list<int>::iterator it = treeItemList.begin();
 	for (it; it != treeItemList.end(); ++it) {
 		AtreeList.push_back(*it);
-	}
+	}	
+	treeItemList.clear();
 	return AtreeList;
 }
 
 list<int> descendTree(Tree<int> tree1) {
 	cout << "Descending:\n";
 	list<int> DtreeList;
+	tree1.inorder(f3);
 	int s = treeItemList.size();
 	for (int x = 0; x < s; x++) {
 		DtreeList.push_back(treeItemList.back());

@@ -44,20 +44,25 @@ int main() {
 	}
 	else {
 		Task temp;
-		string hold;
+		string hold = "";
 
 		while (!file1.eof()) {
+			file1 >> temp.taskN >> temp.taskC;
 			getline(file1, hold);
 			if (file1.end) {
-				temp.taskC = ' ', temp.taskD = "", temp.taskN = 0; temp.taskP;
-				temp.taskN = (int)hold[0] - 48;
-				temp.taskC = hold[2];
-				for (int x = 3; x < hold.size(); x++) {
+				temp.taskD = "", temp.taskP;
+				
+				for (int x = 0; x < hold.size(); x++) {
 					if (isalpha(hold[x]) || hold[x] == ' ') {
 						temp.taskD += hold[x];
 					}
-					if (isdigit(hold[x])) {
-						temp.taskP = (int)hold[x] - 48;
+					if (isdigit(hold[x]) && x == hold.size() - 1) {
+						temp.taskP = ((int)hold[x]) - 48;
+					}
+					else if (isdigit(hold[x]) && x < hold.size() - 1) {
+						// number has two digits
+						temp.taskP = ((((int)hold[x]) - 48) * 10) + (((int)hold[x + 1]) - 48);	
+						break;
 					}
 				}
 				pq.push(temp);
